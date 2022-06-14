@@ -1,0 +1,1 @@
+select * from cartelera where id = :id

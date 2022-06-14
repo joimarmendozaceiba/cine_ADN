@@ -1,0 +1,1 @@
+select * from pelicula where id = :id
