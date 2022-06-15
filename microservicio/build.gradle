@@ -12,6 +12,7 @@ plugins {
 	id 'org.springframework.boot' version  "${springBootVersion}"
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+	id 'jacoco'
 	id 'info.solidsoft.pitest' version '1.7.4'
 	id 'com.github.jk1.dependency-license-report' version '2.0'
 }
@@ -85,6 +86,7 @@ dependencies {
 	
 	implementation project.ext.springbootundertow
 	implementation project.ext.flyway
+
 
 	implementation project(':infraestructura')
 	implementation 'io.swagger:swagger-annotations:1.5.0'
