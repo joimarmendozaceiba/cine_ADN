@@ -1,10 +1,6 @@
 package com.ceiba.cartelera.comando.manejador;
 
 import com.ceiba.ComandoRespuesta;
-import com.ceiba.boleto.comando.ComandoBoleto;
-import com.ceiba.boleto.comando.fabrica.FabricaBoleto;
-import com.ceiba.boleto.modelo.entidad.Boleto;
-import com.ceiba.boleto.servicio.CrearBoletoServicio;
 import com.ceiba.cartelera.comando.ComandoCartelera;
 import com.ceiba.cartelera.comando.fabrica.FabricaCartelera;
 import com.ceiba.cartelera.modelo.entidad.Cartelera;

@@ -1,9 +1,5 @@
 package com.ceiba.pelicula.comando.manejador;
 
-import com.ceiba.cliente.comando.ComandoCliente;
-import com.ceiba.cliente.comando.fabrica.FabricaCliente;
-import com.ceiba.cliente.modelo.entidad.Cliente;
-import com.ceiba.cliente.servicio.ActualizarClienteServicio;
 import com.ceiba.manejador.ManejadorComando;
 import com.ceiba.pelicula.comando.ComandoPelicula;
 import com.ceiba.pelicula.comando.fabrica.FabricaPelicula;

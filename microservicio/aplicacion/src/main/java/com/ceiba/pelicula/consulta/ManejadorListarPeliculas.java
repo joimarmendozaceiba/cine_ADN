@@ -1,7 +1,5 @@
 package com.ceiba.pelicula.consulta;
 
-import com.ceiba.cliente.modelo.dto.ClienteDTO;
-import com.ceiba.cliente.puerto.dao.ClienteDAO;
 import com.ceiba.pelicula.modelo.dto.PeliculaDTO;
 import com.ceiba.pelicula.puerto.dao.PeliculaDAO;
 import org.springframework.stereotype.Component;

@@ -1,10 +1,6 @@
 package com.ceiba.pelicula.controlador;
 
 import com.ceiba.ComandoRespuesta;
-import com.ceiba.cliente.comando.ComandoCliente;
-import com.ceiba.cliente.comando.manejador.ManejadorActualizarCliente;
-import com.ceiba.cliente.comando.manejador.ManejadorCrearCliente;
-import com.ceiba.cliente.comando.manejador.ManejadorEliminarCliente;
 import com.ceiba.pelicula.comando.ComandoPelicula;
 import com.ceiba.pelicula.comando.manejador.ManejadorActualizarPelicula;
 import com.ceiba.pelicula.comando.manejador.ManejadorCrearPelicula;
@@ -16,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/peliculas")
-@Api(tags = { "Controlador comando peliculas"})
+@Api(tags = {"Controlador comando peliculas"})
 public class ComandoControladorPelicula {
 
     private final ManejadorCrearPelicula manejadorCrearPelicula;

@@ -1,8 +1,6 @@
 package com.ceiba.cliente.adaptador.dao;
 
-import ch.qos.logback.core.net.server.Client;
 import com.ceiba.cliente.modelo.dto.ClienteDTO;
-import com.ceiba.cliente.modelo.entidad.Cliente;
 import com.ceiba.infraestructura.jdbc.MapperResult;
 import org.springframework.jdbc.core.RowMapper;
 
@@ -10,7 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
 
-public class ClienteMapeo implements RowMapper<ClienteDTO>, MapperResult  {
+public class ClienteMapeo implements RowMapper<ClienteDTO>, MapperResult {
     @Override
     public ClienteDTO mapRow(ResultSet resultSet, int rowNum) throws SQLException {
 

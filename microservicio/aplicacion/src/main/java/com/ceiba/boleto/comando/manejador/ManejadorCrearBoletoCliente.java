@@ -4,7 +4,6 @@ import com.ceiba.ComandoRespuesta;
 import com.ceiba.boleto.comando.ComandoBoleto;
 import com.ceiba.boleto.comando.fabrica.FabricaBoleto;
 import com.ceiba.boleto.modelo.entidad.Boleto;
-import com.ceiba.boleto.servicio.CrearBoletoClienteServicio;
 import com.ceiba.cliente.comando.ComandoCliente;
 import com.ceiba.cliente.comando.fabrica.FabricaCliente;
 import com.ceiba.cliente.modelo.entidad.Cliente;

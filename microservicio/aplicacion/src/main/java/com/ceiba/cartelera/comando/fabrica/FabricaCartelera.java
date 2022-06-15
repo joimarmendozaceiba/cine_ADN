@@ -1,7 +1,5 @@
 package com.ceiba.cartelera.comando.fabrica;
 
-import com.ceiba.boleto.comando.ComandoBoleto;
-import com.ceiba.boleto.modelo.entidad.Boleto;
 import com.ceiba.cartelera.comando.ComandoCartelera;
 import com.ceiba.cartelera.modelo.entidad.Cartelera;
 import org.springframework.stereotype.Component;

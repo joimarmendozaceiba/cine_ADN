@@ -8,6 +8,8 @@ public class CalcularPrecioBoletoServicio {
     private static final double AUMENTO_FIN_DE_SEMANA = 1.3;
     private static final double DESCUENTO_MIERCOLES_JUEVES = 0.6;
     private static final double DESCUENTO_VIERNES= 1.1;
+
+    //constructor
     public CalcularPrecioBoletoServicio() {
     }
 

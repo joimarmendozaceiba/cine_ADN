@@ -1,6 +1,5 @@
 package com.ceiba.cartelera.adaptador.dao;
 
-import com.ceiba.boleto.adaptador.repositorio.BoletoMapeo;
 import com.ceiba.cartelera.adaptador.repositorio.CarteleraMapeo;
 import com.ceiba.cartelera.modelo.dto.CarteleraDTO;
 import com.ceiba.cartelera.puerto.dao.CarteleraDAO;
@@ -15,10 +14,10 @@ public class CarteleraDAOMysql implements CarteleraDAO {
 
     private final CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate;
 
-    @SqlStatement(namespace= "cartelera", value="listar")
+    @SqlStatement(namespace = "cartelera", value = "listar")
     private static String sqlListar;
 
-    @SqlStatement(namespace= "cartelera", value="obtener")
+    @SqlStatement(namespace = "cartelera", value = "obtener")
     private static String sqlObtener;
 
     public CarteleraDAOMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {

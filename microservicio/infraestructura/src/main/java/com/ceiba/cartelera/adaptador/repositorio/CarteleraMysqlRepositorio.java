@@ -1,7 +1,5 @@
 package com.ceiba.cartelera.adaptador.repositorio;
 
-import com.ceiba.boleto.modelo.entidad.Boleto;
-import com.ceiba.boleto.puerto.repositorio.RepositorioBoleto;
 import com.ceiba.cartelera.modelo.entidad.Cartelera;
 import com.ceiba.cartelera.puerto.repositorio.RepositorioCartelera;
 import com.ceiba.infraestructura.jdbc.CustomNamedParameterJdbcTemplate;
@@ -14,13 +12,13 @@ public class CarteleraMysqlRepositorio implements RepositorioCartelera {
 
     private final CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate;
 
-    @SqlStatement(namespace= "cartelera", value="crear")
+    @SqlStatement(namespace = "cartelera", value = "crear")
     private static String sqlCrear;
 
-    @SqlStatement(namespace= "cartelera", value="eliminar")
+    @SqlStatement(namespace = "cartelera", value = "eliminar")
     private static String sqlEliminar;
 
-    @SqlStatement(namespace= "cartelera", value="existe")
+    @SqlStatement(namespace = "cartelera", value = "existe")
     private static String sqlExiste;
 
 

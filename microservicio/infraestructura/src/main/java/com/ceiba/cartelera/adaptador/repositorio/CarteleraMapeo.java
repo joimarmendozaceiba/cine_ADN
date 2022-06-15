@@ -1,6 +1,5 @@
 package com.ceiba.cartelera.adaptador.repositorio;
 
-import com.ceiba.boleto.modelo.dto.BoletoDTO;
 import com.ceiba.cartelera.modelo.dto.CarteleraDTO;
 import com.ceiba.infraestructura.jdbc.MapperResult;
 import org.springframework.jdbc.core.RowMapper;

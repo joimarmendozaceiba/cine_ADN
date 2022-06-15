@@ -1,6 +1,5 @@
 package com.ceiba.pelicula.adaptador.dao;
 
-import com.ceiba.cliente.modelo.dto.ClienteDTO;
 import com.ceiba.infraestructura.jdbc.CustomNamedParameterJdbcTemplate;
 import com.ceiba.infraestructura.jdbc.sqlstatement.SqlStatement;
 import com.ceiba.pelicula.modelo.dto.PeliculaDTO;
@@ -14,10 +13,10 @@ import java.util.List;
 public class PeliculaDAOMysql implements PeliculaDAO {
     private final CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate;
 
-    @SqlStatement(namespace="pelicula", value="listar")
+    @SqlStatement(namespace = "pelicula", value = "listar")
     private static String sqlListar;
 
-    @SqlStatement(namespace="pelicula", value="obtener")
+    @SqlStatement(namespace = "pelicula", value = "obtener")
     private static String sqlObtener;
 
     public PeliculaDAOMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {
@@ -34,8 +33,8 @@ public class PeliculaDAOMysql implements PeliculaDAO {
     public PeliculaDTO obtenerPeliculaPorId(Long id) {
         MapSqlParameterSource paramSource = new MapSqlParameterSource();
         paramSource.addValue("id", id);
-        List<PeliculaDTO> list=this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlObtener, paramSource, new PeliculaMapeo());
-        if(list.size()==1){
+        List<PeliculaDTO> list = this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlObtener, paramSource, new PeliculaMapeo());
+        if (list.size() == 1) {
             return list.get(0);
         }
         return null;

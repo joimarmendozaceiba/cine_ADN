@@ -1,6 +1,5 @@
 package com.ceiba.pelicula.adaptador.repositorio;
 
-import com.ceiba.cliente.modelo.entidad.Cliente;
 import com.ceiba.infraestructura.jdbc.CustomNamedParameterJdbcTemplate;
 import com.ceiba.infraestructura.jdbc.sqlstatement.SqlStatement;
 import com.ceiba.pelicula.modelo.entidad.Pelicula;
@@ -12,16 +11,16 @@ import org.springframework.stereotype.Repository;
 public class PeliculaRepositorioMysql implements RepositorioPelicula {
     private final CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate;
 
-    @SqlStatement(namespace="pelicula", value="crear")
+    @SqlStatement(namespace = "pelicula", value = "crear")
     private static String sqlCrear;
 
-    @SqlStatement(namespace="pelicula", value="actualizar")
+    @SqlStatement(namespace = "pelicula", value = "actualizar")
     private static String sqlActualizar;
 
-    @SqlStatement(namespace="pelicula", value="eliminar")
+    @SqlStatement(namespace = "pelicula", value = "eliminar")
     private static String sqlEliminar;
 
-    @SqlStatement(namespace="pelicula", value="existe")
+    @SqlStatement(namespace = "pelicula", value = "existe")
     private static String sqlExiste;
 
 

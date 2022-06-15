@@ -1,6 +1,5 @@
 package com.ceiba.pelicula.adaptador.dao;
 
-import com.ceiba.cliente.modelo.dto.ClienteDTO;
 import com.ceiba.infraestructura.jdbc.MapperResult;
 import com.ceiba.pelicula.modelo.dto.PeliculaDTO;
 import org.springframework.jdbc.core.RowMapper;
@@ -9,7 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
 
-public class PeliculaMapeo implements RowMapper<PeliculaDTO>, MapperResult  {
+public class PeliculaMapeo implements RowMapper<PeliculaDTO>, MapperResult {
     @Override
     public PeliculaDTO mapRow(ResultSet resultSet, int rowNum) throws SQLException {
 

@@ -1,7 +1,5 @@
 package com.ceiba.cartelera.controlador;
 
-import com.ceiba.boleto.consulta.ManejadorListarBoletos;
-import com.ceiba.boleto.modelo.dto.BoletoDTO;
 import com.ceiba.cartelera.consulta.ManejadorListarCarteleras;
 import com.ceiba.cartelera.modelo.dto.CarteleraDTO;
 import io.swagger.annotations.Api;
@@ -14,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/carteleras")
-@Api(tags={"Controlador consulta carteleras"})
+@Api(tags = {"Controlador consulta carteleras"})
 public class ConsultaControladorCartelera {
 
     private final ManejadorListarCarteleras manejadorListarCarteleras;

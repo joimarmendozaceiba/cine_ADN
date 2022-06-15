@@ -11,11 +11,11 @@ import org.mockito.Mockito;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ServicioCrearPeliculaTest {
+ class ServicioCrearPeliculaTest {
 
 
     @Test
-    public void validarPeliculaExistenciaPreviaTest() {
+     void validarPeliculaExistenciaPreviaTest() {
         // arrange
         Pelicula pelicula = new PeliculaTestDataBuilder().build();
         RepositorioPelicula repositorioPelicula = Mockito.mock(RepositorioPelicula.class);
@@ -26,7 +26,7 @@ public class ServicioCrearPeliculaTest {
     }
 
     @Test
-    public void validarCreacionPelicula() {
+     void validarCreacionPelicula() {
         // arrange
         Long ID = 1L;
         Pelicula pelicula = new PeliculaTestDataBuilder().build();

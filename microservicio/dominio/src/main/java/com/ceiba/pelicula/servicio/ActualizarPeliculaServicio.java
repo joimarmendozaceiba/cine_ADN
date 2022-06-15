@@ -1,7 +1,5 @@
 package com.ceiba.pelicula.servicio;
 
-import com.ceiba.cliente.modelo.entidad.Cliente;
-import com.ceiba.cliente.puerto.repositorio.RepositorioCliente;
 import com.ceiba.dominio.excepcion.ExcepcionSinDatos;
 import com.ceiba.pelicula.modelo.entidad.Pelicula;
 import com.ceiba.pelicula.puerto.repositorio.RepositorioPelicula;
@@ -15,7 +13,7 @@ public class ActualizarPeliculaServicio {
         this.repositorioPelicula = repositorioPelicula;
     }
 
-    public  void ejecutar(Pelicula pelicula) {
+    public void ejecutar(Pelicula pelicula) {
         validarExistenciaPrevia(pelicula);
         this.repositorioPelicula.actualizar(pelicula);
     }
