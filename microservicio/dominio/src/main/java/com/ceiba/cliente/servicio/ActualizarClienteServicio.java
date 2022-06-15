@@ -2,6 +2,8 @@ package com.ceiba.cliente.servicio;
 
 import com.ceiba.cliente.modelo.entidad.Cliente;
 import com.ceiba.cliente.puerto.repositorio.RepositorioCliente;
+import com.ceiba.cliente.utils.MensajesDeExcepcion;
+import com.ceiba.dominio.excepcion.ExcepcionSinDatos;
 
 public class ActualizarClienteServicio {
 
@@ -19,7 +21,7 @@ public class ActualizarClienteServicio {
     private void validarExistenciaPrevia(Cliente cliente) {
         boolean existe = this.repositorioCliente.existe(cliente.getId());
         if (!existe) {
-//            throw new ExcepcionSinDatos(MensajesDeExcepcion.NO_EXISTE_UN_AFILIADO_REGISTRADO_CON_ESTE_ID.getMensaje());
+            throw new ExcepcionSinDatos(MensajesDeExcepcion.NO_EXISTE_UN_AFILIADO_REGISTRADO_CON_ESTE_ID.getMensaje());
         }
     }
 }

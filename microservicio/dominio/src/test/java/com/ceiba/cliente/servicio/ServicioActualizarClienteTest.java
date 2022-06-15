@@ -13,10 +13,10 @@ import org.mockito.Mockito;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
- class ServicioActualizarClienteTest {
+public class ServicioActualizarClienteTest {
 
     @Test
-     void validarClienteExistenciaPreviaTest() {
+    public void validarClienteExistenciaPreviaTest() {
         // arrange
         Cliente cliente = new ClienteTestDataBuilder().build();
         RepositorioCliente repositorioCliente = Mockito.mock(RepositorioCliente.class);
@@ -27,7 +27,7 @@ import static org.mockito.Mockito.verify;
     }
 
     @Test
-     void validarActualizacionAfiliadoTest() {
+    public void validarActualizacionAfiliadoTest() {
         // arrange
         Cliente cliente = new ClienteTestDataBuilder().build();
         RepositorioCliente repositorioCliente = Mockito.mock(RepositorioCliente.class);

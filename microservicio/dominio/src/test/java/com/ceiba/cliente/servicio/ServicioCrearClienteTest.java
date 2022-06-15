@@ -11,11 +11,11 @@ import org.mockito.Mockito;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
- class ServicioCrearClienteTest {
+public class ServicioCrearClienteTest {
 
 
     @Test
-     void validarClienteExistenciaPreviaTest() {
+    public void validarClienteExistenciaPreviaTest() {
         // arrange
         Cliente cliente = new ClienteTestDataBuilder().build();
         RepositorioCliente repositorioCliente = Mockito.mock(RepositorioCliente.class);
@@ -26,7 +26,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
     }
 
     @Test
-     void validarCreacionCliente() {
+    public void validarCreacionCliente() {
         // arrange
         Long ID = 1L;
         Cliente cliente = new ClienteTestDataBuilder().build();

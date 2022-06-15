@@ -1,5 +1,7 @@
 package com.ceiba.pelicula.servicio;
 
+import com.ceiba.cliente.modelo.entidad.Cliente;
+import com.ceiba.cliente.puerto.repositorio.RepositorioCliente;
 import com.ceiba.dominio.excepcion.ExcepcionValorInvalido;
 import com.ceiba.pelicula.modelo.entidad.Pelicula;
 import com.ceiba.pelicula.puerto.repositorio.RepositorioPelicula;

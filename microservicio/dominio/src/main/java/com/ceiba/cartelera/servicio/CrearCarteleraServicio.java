@@ -2,13 +2,13 @@ package com.ceiba.cartelera.servicio;
 
 import com.ceiba.cartelera.modelo.entidad.Cartelera;
 import com.ceiba.cartelera.puerto.repositorio.RepositorioCartelera;
-import com.ceiba.cartelera.utils.MensajesDeExcepcion;
-import com.ceiba.dominio.excepcion.ExcepcionValorInvalido;
+import com.ceiba.cliente.modelo.entidad.Cliente;
+import com.ceiba.cliente.puerto.repositorio.RepositorioCliente;
 
 public class CrearCarteleraServicio {
     private final RepositorioCartelera repositorioCartelera;
 
-    public CrearCarteleraServicio(RepositorioCartelera repositorioCartelera) {
+    public CrearCarteleraServicio( RepositorioCartelera repositorioCartelera) {
         this.repositorioCartelera = repositorioCartelera;
     }
 
@@ -20,7 +20,7 @@ public class CrearCarteleraServicio {
     private void validarExistenciaPrevia(Cartelera cartelera) {
         boolean existe = this.repositorioCartelera.existe(cartelera.getId());
         if (existe) {
-            throw new ExcepcionValorInvalido(MensajesDeExcepcion.YA_EXISTE_UNA_CARTELERA_REGISTRADA_CON_ESTE_ID.getMensaje());
+//            throw new ExcepcionValorInvalido(MensajesDeExcepcion.YA_EXISTE_UN_AFILIADO_REGISTRADO_CON_ESTE_ID.getMensaje());
         }
     }
 }

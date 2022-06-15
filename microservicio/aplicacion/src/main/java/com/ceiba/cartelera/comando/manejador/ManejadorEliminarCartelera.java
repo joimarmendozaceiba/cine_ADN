@@ -1,5 +1,6 @@
 package com.ceiba.cartelera.comando.manejador;
 
+import com.ceiba.boleto.servicio.EliminarBoletoServicio;
 import com.ceiba.cartelera.servicio.EliminarCarteleraServicio;
 import com.ceiba.manejador.ManejadorComando;
 import org.springframework.stereotype.Component;
@@ -13,7 +14,7 @@ public class ManejadorEliminarCartelera implements ManejadorComando<Long> {
     }
 
     @Override
-    public void ejecutar(Long id) {
+    public void ejecutar(Long id ) {
         this.eliminarCarteleraServicio.ejecutar(id);
     }
 }

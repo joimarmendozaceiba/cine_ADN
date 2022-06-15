@@ -2,6 +2,7 @@ package com.ceiba.boleto.servicio;
 
 import com.ceiba.boleto.modelo.entidad.Boleto;
 import com.ceiba.boleto.puerto.repositorio.RepositorioBoleto;
+import com.ceiba.cliente.modelo.entidad.Cliente;
 
 public class CalcularPrecioBoletoClienteServicio {
 
@@ -12,8 +13,8 @@ public class CalcularPrecioBoletoClienteServicio {
     private final RepositorioBoleto repositorioBoleto;
 
 
-    public CalcularPrecioBoletoClienteServicio(RepositorioBoleto repositorioBoleto) {
-        this.repositorioBoleto = repositorioBoleto;
+    public CalcularPrecioBoletoClienteServicio(RepositorioBoleto repositorioEntrada) {
+        this.repositorioBoleto = repositorioEntrada;
     }
 
     public Double ejecutar(Boleto boleto) {

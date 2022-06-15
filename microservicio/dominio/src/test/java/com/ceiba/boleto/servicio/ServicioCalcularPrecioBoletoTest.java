@@ -11,12 +11,11 @@ import org.mockito.Mockito;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
- class ServicioCalcularPrecioBoletoTest {
+public class ServicioCalcularPrecioBoletoTest {
 
     double epsilon = 0.000001d;
-
     @Test
-     void validarPrecioLunesMartesCliente() {
+    public void validarPrecioLunesMartesCliente() {
         // arrange
         Boleto boleto = new BoletoTestDataBuilder().fechaFuncionLunesMartes().build();
 
@@ -30,7 +29,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
     }
 
     @Test
-     void validarPrecioMiercolesJuevesCliente() {
+    public void validarPrecioMiercolesJuevesCliente() {
         // arrange
         Boleto boleto = new BoletoTestDataBuilder().fechaFuncionMiercolesJueves().build();
         Cliente cliente = new ClienteTestDataBuilder().build();
@@ -49,7 +48,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
     }
 
     @Test
-     void validarPrecioViernesCliente() {
+    public void validarPrecioViernesCliente() {
         // arrange
         Boleto boleto = new BoletoTestDataBuilder().fechaFuncionViernes().build();
         Cliente cliente = new ClienteTestDataBuilder().build();
@@ -69,7 +68,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
     }
 
     @Test
-     void validarPrecioFinDeSemanaCliente() {
+    public void validarPrecioFinDeSemanaCliente() {
         // arrange
         Boleto boleto = new BoletoTestDataBuilder().fechaFuncionFinDeSemana().build();
         Cliente cliente = new ClienteTestDataBuilder().build();

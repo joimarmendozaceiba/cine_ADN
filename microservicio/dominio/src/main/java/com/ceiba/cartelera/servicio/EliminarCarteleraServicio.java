@@ -1,6 +1,7 @@
 package com.ceiba.cartelera.servicio;
 
 import com.ceiba.cartelera.puerto.repositorio.RepositorioCartelera;
+import com.ceiba.cliente.puerto.repositorio.RepositorioCliente;
 
 public class EliminarCarteleraServicio {
     private final RepositorioCartelera repositorioCartelera;
