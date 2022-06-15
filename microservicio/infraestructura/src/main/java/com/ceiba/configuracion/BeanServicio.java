@@ -42,11 +42,6 @@ public class BeanServicio {
     }
 
     @Bean
-    public CrearBoletoClienteServicio crearBoletoClienteServicio (RepositorioBoleto repositorioBoleto, RepositorioCliente repositorioCliente, CalcularPrecioBoletoClienteServicio calcularPrecioBoletoClienteServicio) {
-        return new CrearBoletoClienteServicio(repositorioBoleto,repositorioCliente,calcularPrecioBoletoClienteServicio);
-    }
-
-    @Bean
     public EliminarBoletoServicio eliminarBoletoServicio(RepositorioBoleto repositorioBoleto) {
         return new EliminarBoletoServicio(repositorioBoleto);
     }
