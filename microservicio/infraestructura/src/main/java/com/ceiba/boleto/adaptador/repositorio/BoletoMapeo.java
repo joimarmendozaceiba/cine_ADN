@@ -15,7 +15,7 @@ public class BoletoMapeo implements RowMapper<BoletoDTO>, MapperResult {
 
         Long id = resultSet.getLong("id");
         Double valorTotal = resultSet.getDouble("valor");
-        String nombrePelicula = resultSet.getString("nombrePelicula");
+        String nombrePelicula = resultSet.getString("nombre_pelicula");
         LocalDateTime fechaFuncion = extraerLocalDateTime(resultSet, "fecha_funcion");
         String pagoBanco = resultSet.getString("pago_banco");
         int sedeID = resultSet.getInt("sede_id");

@@ -12,7 +12,7 @@ public class PeliculaDTO {
     private String nombrePelicula;
     private String genero;
     private int duracion;
-    private LocalDateTime año;
+    private int anio;
     private String descripcion;
     private String director;
 }

@@ -10,7 +10,7 @@ public class PeliculaTestDataBuilder {
     private String nombrePelicula;
     private String genero;
     private int duracion;
-    private LocalDateTime año;
+    private int anio;
     private String descripcion;
     private String director;
 
@@ -19,12 +19,12 @@ public class PeliculaTestDataBuilder {
         nombrePelicula = "Avalancha en el aire";
         genero = "suspenso";
         duracion = 132;
-        año = LocalDateTime.now();
+        anio = 2022;
         descripcion = "pelicula de suspenso basada en hechos reales";
         director = "Paco Hernandez";
     }
 
     public Pelicula build() {
-        return new Pelicula(id, nombrePelicula, genero, duracion, año, descripcion, director);
+        return new Pelicula(id, nombrePelicula, genero, duracion, anio, descripcion, director);
     }
 }

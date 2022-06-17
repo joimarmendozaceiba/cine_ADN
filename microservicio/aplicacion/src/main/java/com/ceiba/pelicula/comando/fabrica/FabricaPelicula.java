@@ -12,7 +12,7 @@ public class FabricaPelicula {
                 comandoPelicula.getNombrePelicula(),
                 comandoPelicula.getGenero(),
                 comandoPelicula.getDuracion(),
-                comandoPelicula.getAño(),
+                comandoPelicula.getAnio(),
                 comandoPelicula.getDescripcion(),
                 comandoPelicula.getDirector()
         );

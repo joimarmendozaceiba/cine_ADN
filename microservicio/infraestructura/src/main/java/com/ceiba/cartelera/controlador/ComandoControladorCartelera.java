@@ -32,8 +32,8 @@ public class ComandoControladorCartelera {
 
     @DeleteMapping(value = "/{id}")
     @ApiOperation("Eliminar cartelera")
-    public void eliminar(@PathVariable ComandoCartelera id) {
-        manejadorCrearCartelera.ejecutar(id);
+    public void eliminar(@PathVariable Long id) {
+        manejadorEliminarCartelera.ejecutar(id);
     }
 
 

@@ -4,29 +4,29 @@ import com.ceiba.BasePrueba;
 import com.ceiba.cliente.modelo.entidad.Cliente;
 import com.ceiba.cliente.puerto.repositorio.RepositorioCliente;
 import com.ceiba.cliente.servicio.testdatabuilder.ClienteTestDataBuilder;
-import com.ceiba.cliente.utils.MensajesDeExcepcion;
+import com.ceiba.cliente.utils.MensajesDeExcepcionCliente;
 import com.ceiba.dominio.excepcion.ExcepcionValorInvalido;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
- class ServicioCrearClienteTest {
+class ServicioCrearClienteTest {
 
 
     @Test
-     void validarClienteExistenciaPreviaTest() {
+    void validarClienteExistenciaPreviaTest() {
         // arrange
         Cliente cliente = new ClienteTestDataBuilder().build();
         RepositorioCliente repositorioCliente = Mockito.mock(RepositorioCliente.class);
         Mockito.when(repositorioCliente.existe(Mockito.anyLong())).thenReturn(true);
         CrearClienteServicio crearClienteServicio = new CrearClienteServicio(repositorioCliente);
         // act - assert
-        BasePrueba.assertThrows(() -> crearClienteServicio.ejecutar(cliente), ExcepcionValorInvalido.class, MensajesDeExcepcion.YA_EXISTE_UN_AFILIADO_REGISTRADO_CON_ESTE_ID.getMensaje());
+        BasePrueba.assertThrows(() -> crearClienteServicio.ejecutar(cliente), ExcepcionValorInvalido.class, MensajesDeExcepcionCliente.YA_EXISTE_UN_AFILIADO_REGISTRADO_CON_ESTE_ID.getMensaje());
     }
 
     @Test
-     void validarCreacionCliente() {
+    void validarCreacionCliente() {
         // arrange
         Long ID = 1L;
         Cliente cliente = new ClienteTestDataBuilder().build();

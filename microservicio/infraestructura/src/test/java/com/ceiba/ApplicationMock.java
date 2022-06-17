@@ -13,7 +13,7 @@ import java.io.IOException;
 
 @ComponentScan("com.ceiba")
 public class ApplicationMock {
-	
+
 
     @Bean
     public DataSource h2DataSource() {
@@ -23,7 +23,7 @@ public class ApplicationMock {
     @Bean(initMethod = "migrate")
     Flyway flyway(DataSource dataSource) throws IOException {
 
-        return Flyway.configure().locations("filesystem:../src/main/resources","filesystem:src/test/resources").baselineOnMigrate(true)
+        return Flyway.configure().locations("filesystem:../src/main/resources", "filesystem:src/test/resources").baselineOnMigrate(true)
                 .dataSource(dataSource).load();
 
     }
@@ -32,5 +32,5 @@ public class ApplicationMock {
     public NamedParameterJdbcTemplate namedParameterJdbcTemplate(DataSource dataSource) {
         return new NamedParameterJdbcTemplate(dataSource);
     }
-	
+
 }

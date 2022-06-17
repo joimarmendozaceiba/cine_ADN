@@ -11,7 +11,6 @@ import com.ceiba.cliente.servicio.ActualizarClienteServicio;
 import com.ceiba.cliente.servicio.CrearClienteServicio;
 import com.ceiba.cliente.servicio.EliminarClienteServicio;
 import com.ceiba.pelicula.puerto.repositorio.RepositorioPelicula;
-import com.ceiba.pelicula.servicio.ActualizarPeliculaServicio;
 import com.ceiba.pelicula.servicio.CrearPeliculaServicio;
 import com.ceiba.pelicula.servicio.EliminarPeliculaServicio;
 import org.springframework.context.annotation.Bean;
@@ -42,11 +41,6 @@ public class BeanServicio {
     }
 
     @Bean
-    public CrearBoletoClienteServicio crearBoletoClienteServicio (RepositorioBoleto repositorioBoleto, RepositorioCliente repositorioCliente, CalcularPrecioBoletoClienteServicio calcularPrecioBoletoClienteServicio) {
-        return new CrearBoletoClienteServicio(repositorioBoleto,repositorioCliente,calcularPrecioBoletoClienteServicio);
-    }
-
-    @Bean
     public EliminarBoletoServicio eliminarBoletoServicio(RepositorioBoleto repositorioBoleto) {
         return new EliminarBoletoServicio(repositorioBoleto);
     }
@@ -54,11 +48,6 @@ public class BeanServicio {
     @Bean
     public CalcularPrecioBoletoServicio calcularPrecioBoletoServicio() {
         return new CalcularPrecioBoletoServicio();
-    }
-
-    @Bean
-    public CalcularPrecioBoletoClienteServicio calcularPrecioBoletoClienteServicio(RepositorioBoleto repositorioBoleto) {
-        return new CalcularPrecioBoletoClienteServicio(repositorioBoleto);
     }
 
     @Bean
@@ -86,11 +75,5 @@ public class BeanServicio {
     public EliminarPeliculaServicio eliminarPeliculaServicio(RepositorioPelicula repositorioPelicula) {
         return new EliminarPeliculaServicio(repositorioPelicula);
     }
-
-    @Bean
-    public ActualizarPeliculaServicio actualizarPeliculaServicio(RepositorioPelicula repositorioPelicula) {
-        return new ActualizarPeliculaServicio(repositorioPelicula);
-    }
-
 
 }

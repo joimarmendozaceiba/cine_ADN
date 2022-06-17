@@ -1,3 +1,19 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    configurations.maybeCreate('pitest')
+    dependencies {
+        pitest 'org.pitest:pitest-junit5-plugin:0.15'
+    }
+
+
+}
+
+plugins {
+    id 'info.solidsoft.pitest'
+}
+
 apply plugin: 'java'
 apply plugin: 'eclipse'
 
@@ -6,15 +22,41 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
 repositories {
-	mavenCentral()
+    mavenCentral()
+}
+
+
+pitest {
+    testPlugin = 'junit5'
+    junit5PluginVersion = '0.15'
+    testSourceSets = [sourceSets.test]
+    mainSourceSets = [sourceSets.main]
+    useClasspathFile = true
 }
 
 dependencies {
+    implementation 'org.testng:testng:7.1.0'
+    testImplementation project.ext.springboottest
+    testImplementation project.ext.mockitocore
+    testImplementation project.ext.mockitoinline
+    testImplementation project.ext.mockitojupiter
 
-	implementation project(':dominio')
-	implementation project(':comun:comun-aplicacion')
-	implementation project.ext.springtxt
+    implementation project(':dominio')
+    implementation project(':comun:comun-aplicacion')
+    implementation project.ext.springtxt
 
-	compileOnly project.ext.lombok
-	annotationProcessor project.ext.lombok
+    compileOnly project.ext.lombok
+    annotationProcessor project.ext.lombok
+}
+
+test {
+    useJUnitPlatform()
+}
+
+pitest {
+    testPlugin = 'junit5'
+    junit5PluginVersion = '0.15'
+    testSourceSets = [sourceSets.test]
+    mainSourceSets = [sourceSets.main]
+    useClasspathFile = true
 }

@@ -1,3 +1,3 @@
 select *
 from pelicula
-order by nombre
+order by nombre_pelicula

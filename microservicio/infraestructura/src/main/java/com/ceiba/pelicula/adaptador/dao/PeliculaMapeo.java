@@ -16,10 +16,10 @@ public class PeliculaMapeo implements RowMapper<PeliculaDTO>, MapperResult {
         String nombrePelicula = resultSet.getString("nombre_pelicula");
         String genero = resultSet.getString("genero");
         int duracion = resultSet.getInt("duracion");
-        LocalDateTime año = extraerLocalDateTime(resultSet, "descripcion");
-        String descripcion = resultSet.getString("año");
+        int anio = resultSet.getInt( "año");
+        String descripcion = resultSet.getString("descripcion");
         String director = resultSet.getString("director");
 
-        return new PeliculaDTO(id, nombrePelicula, genero, duracion, año, descripcion, director);
+        return new PeliculaDTO(id, nombrePelicula, genero, duracion, anio, descripcion, director);
     }
 }

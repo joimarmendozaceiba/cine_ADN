@@ -5,7 +5,7 @@ import com.ceiba.BasePrueba;
 import com.ceiba.cliente.modelo.entidad.Cliente;
 import com.ceiba.cliente.puerto.repositorio.RepositorioCliente;
 import com.ceiba.cliente.servicio.testdatabuilder.ClienteTestDataBuilder;
-import com.ceiba.cliente.utils.MensajesDeExcepcion;
+import com.ceiba.cliente.utils.MensajesDeExcepcionCliente;
 import com.ceiba.dominio.excepcion.ExcepcionSinDatos;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -23,7 +23,7 @@ import static org.mockito.Mockito.verify;
         Mockito.when(repositorioCliente.existe(Mockito.anyLong())).thenReturn(false);
         ActualizarClienteServicio ActualizarClienteServicio = new ActualizarClienteServicio(repositorioCliente);
         // act - assert
-        BasePrueba.assertThrows(() -> ActualizarClienteServicio.ejecutar(cliente), ExcepcionSinDatos.class, MensajesDeExcepcion.NO_EXISTE_UN_AFILIADO_REGISTRADO_CON_ESTE_ID.getMensaje());
+        BasePrueba.assertThrows(() -> ActualizarClienteServicio.ejecutar(cliente), ExcepcionSinDatos.class, MensajesDeExcepcionCliente.NO_EXISTE_UN_AFILIADO_REGISTRADO_CON_ESTE_ID.getMensaje());
     }
 
     @Test

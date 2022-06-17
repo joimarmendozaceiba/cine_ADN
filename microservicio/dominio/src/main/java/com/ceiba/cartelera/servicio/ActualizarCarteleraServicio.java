@@ -2,7 +2,7 @@ package com.ceiba.cartelera.servicio;
 
 import com.ceiba.cartelera.modelo.entidad.Cartelera;
 import com.ceiba.cartelera.puerto.repositorio.RepositorioCartelera;
-import com.ceiba.cartelera.utils.MensajesDeExcepcion;
+import com.ceiba.cartelera.utils.MensajesDeExcepcionCartelera;
 import com.ceiba.dominio.excepcion.ExcepcionSinDatos;
 
 public class ActualizarCarteleraServicio {
@@ -21,7 +21,7 @@ public class ActualizarCarteleraServicio {
     private void validarExistenciaPrevia(Cartelera cartelera) {
         boolean existe = this.repositorioCartelera.existe(cartelera.getId());
         if (!existe) {
-            throw new ExcepcionSinDatos(MensajesDeExcepcion.NO_EXISTE_UNA_CARTELERA_REGISTRADA_CON_ESTE_ID.getMensaje());
+            throw new ExcepcionSinDatos(MensajesDeExcepcionCartelera.NO_EXISTE_UNA_CARTELERA_REGISTRADA_CON_ESTE_ID.getMensaje());
         }
     }
 }
